@@ -1,147 +1,114 @@
-/* =========================
-   Reset & Global
-========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   Body Background
-========================= */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f6f0fa;
     color: #333;
-    text-align: center;
-    line-height: 1.6;
-
-    /* Wedding background image with overlay */
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.45),
-            rgba(0, 0, 0, 0.45)
-        ),
-        url("background.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
-/* =========================
-   Header
-========================= */
-header {
-    background: rgba(142, 68, 173, 0.88);
-    backdrop-filter: blur(6px);
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("background.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+    pointer-events: none; /* 🔑 FIX */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
     color: white;
-    padding: 40px 20px;
+    text-align: center;
+    padding: 20px;
 }
 
-header h1 {
+.hero-content h1 {
     font-size: 36px;
-    margin-bottom: 8px;
 }
 
-header p {
+.hero-content p {
     font-size: 18px;
-    opacity: 0.95;
+    margin-top: 10px;
 }
 
-/* =========================
-   Gallery Layout
-========================= */
+/* MOVIES SECTION */
+.movies {
+    padding: 50px 20px;
+    background: #f6f0fa;
+}
+
+.movies h2 {
+    margin-bottom: 30px;
+    color: #6c3483;
+}
+
+/* GALLERY */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    padding: 40px 25px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* =========================
-   Video Card
-========================= */
+/* VIDEO CARD */
 .video-card {
-    background: rgba(255, 255, 255, 0.92);
-    padding: 25px 20px 30px;
+    background: white;
+    padding: 25px;
     border-radius: 18px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.video-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
 .video-card h3 {
+    margin-bottom: 18px;
     color: #6c3483;
-    font-size: 20px;
-    margin-bottom: 20px;
 }
 
-/* =========================
-   Watch Video Button
-========================= */
+/* BUTTON (FIXED) */
 .watch-btn {
     display: inline-block;
-    padding: 14px 26px;
+    padding: 14px 28px;
     background: linear-gradient(135deg, #8e44ad, #c0392b);
     color: white;
     text-decoration: none;
-    font-size: 16px;
     border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    z-index: 5; /* 🔑 FIX */
 }
 
-.watch-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+.watch-btn:active {
+    transform: scale(0.97);
 }
 
-/* =========================
-   Footer
-========================= */
+/* FOOTER */
 footer {
-    background: rgba(142, 68, 173, 0.9);
+    background: #8e44ad;
     color: white;
-    padding: 18px 10px;
+    text-align: center;
+    padding: 16px;
     font-size: 14px;
 }
 
-/* =========================
-   Responsive Design
-========================= */
-@media (max-width: 768px) {
-    header h1 {
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero-content h1 {
         font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    .video-card h3 {
-        font-size: 18px;
-    }
-
-    .watch-btn {
-        font-size: 15px;
-        padding: 12px 22px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 30px 15px;
-    }
-
-    .gallery {
-        padding: 25px 15px;
     }
 }
