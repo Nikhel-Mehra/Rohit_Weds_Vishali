@@ -1,25 +1,41 @@
 /* =========================
-   Global Styles
+   Reset & Global
 ========================= */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* =========================
+   Body Background
+========================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff6ee;
     color: #333;
     text-align: center;
     line-height: 1.6;
+
+    /* Wedding background image with overlay */
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* =========================
    Header
 ========================= */
 header {
-    background: linear-gradient(135deg, #8e44ad, #c0392b);
+    background: rgba(142, 68, 173, 0.88);
+    backdrop-filter: blur(6px);
     color: white;
     padding: 40px 20px;
 }
@@ -50,16 +66,16 @@ header p {
    Video Card
 ========================= */
 .video-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.92);
     padding: 25px 20px 30px;
     border-radius: 18px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
 .video-card h3 {
@@ -69,7 +85,7 @@ header p {
 }
 
 /* =========================
-   Watch Button
+   Watch Video Button
 ========================= */
 .watch-btn {
     display: inline-block;
@@ -92,7 +108,7 @@ header p {
    Footer
 ========================= */
 footer {
-    background: #8e44ad;
+    background: rgba(142, 68, 173, 0.9);
     color: white;
     padding: 18px 10px;
     font-size: 14px;
