@@ -1,9 +1,11 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #f6f0fa;
@@ -68,7 +70,7 @@ body {
 
 /* VIDEO CARD */
 .video-card {
-    background: white;
+    background: #ffffff;
     padding: 25px;
     border-radius: 18px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
@@ -82,18 +84,18 @@ body {
 
 /* WATCH BUTTON */
 .watch-btn {
-    display: inline-block;
     padding: 14px 28px;
     background: linear-gradient(135deg, #8e44ad, #c0392b);
     color: white;
-    text-decoration: none;
+    border: none;
     border-radius: 30px;
     font-weight: bold;
-    z-index: 5;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .watch-btn:active {
-    transform: scale(0.97);
+    transform: scale(0.96);
 }
 
 /* FOOTER */
