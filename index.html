@@ -9,7 +9,7 @@
 
     <!-- PASSWORD SCRIPT -->
     <script>
-        const correctPassword = "RV2024";
+        const correctPassword = "RohitVishali2024";
 
         function checkPassword() {
             const entered = document.getElementById("passwordInput").value;
@@ -99,7 +99,6 @@
             cursor: pointer;
         }
 
-        /* MAIN CONTENT */
         #main-content {
             display: none;
         }
@@ -107,7 +106,6 @@
         header {
             text-align: center;
             padding: 100px 20px 60px;
-            animation: fadeInDown 1.5s ease-out;
         }
 
         h1 {
@@ -115,7 +113,6 @@
             font-size: clamp(3.5rem, 10vw, 6rem);
             color: var(--gold);
             text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
-            margin-bottom: 10px;
         }
 
         .wedding-date {
@@ -172,13 +169,10 @@
             opacity: 0.8;
         }
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         @media (max-width: 500px) {
-            .gallery-container { grid-template-columns: 1fr; }
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -203,10 +197,70 @@
 </header>
 
 <div class="gallery-container">
-    <!-- YOUR VIDEOS (UNCHANGED) -->
-    <!-- Video 1 to 9 exactly as you had -->
-    <!-- Already working -->
-    <!-- (No need to rewrite again) -->
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/13EV09q3MVBaUEfwEkwjmC3L-QViioibL/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 1</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1Vud5WDs2qf3xDUr1U1-qZs-Udl6IFhW6/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 2</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1y5iEiCKamqA0S3aR02GjgBTPZxk78CDz/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 3</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1FPLBXNmpCN0maw-iBiemUOqaGOilIgM8/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 4</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/175HGIU2dP1LKVwxO81xhp6DyE4uxg74K/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 5</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1SCNSFo76BHCbpJAi7e94pKJtR9BzL7NS/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 6</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1J3Hp_wtkm2odG474MZBPkJ_BjxKCcjw8/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 7</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1k99T7mAeKCiYc83A-z4-ODS1jhbQGub9/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 8</div>
+    </div>
+
+    <div class="video-card">
+        <div class="video-wrapper">
+            <iframe src="https://drive.google.com/file/d/1L84bzEWwZDjGGkcWX98-DDAgzEchwAGo/preview"></iframe>
+        </div>
+        <div class="video-title">VIDEO 9</div>
+    </div>
+
 </div>
 
 <footer>
