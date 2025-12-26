@@ -24,65 +24,47 @@
 
         <div class="video-card">
             <h3>Video No. 1</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=13EV09q3MVBaUE5SydAjlBzjOgD4TY6x9" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('13EV09q3MVBaUE5SydAjlBzjOgD4TY6x9')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 2</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1Vud5WDs2qf3xDRpVj0c3s3mPLdz-qb9X" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1Vud5WDs2qf3xDRpVj0c3s3mPLdz-qb9X')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 3</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1y5iEiCKamqA0Sf4I5nCtn4i7PYTnYfZ7" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1y5iEiCKamqA0Sf4I5nCtn4i7PYTnYfZ7')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 4</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1FPLBXNmpCN0maHbb4nHmrw6q9oKyo3mn" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1FPLBXNmpCN0maHbb4nHmrw6q9oKyo3mn')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 5</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=175HGIU2dP1LK5TjTANTruI-0RxFh8E7O" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('175HGIU2dP1LK5TjTANTruI-0RxFh8E7O')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 6</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1SCNSFo76BHCbpz6P7ySHz7jKg8kzRe5Z" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1SCNSFo76BHCbpz6P7ySHz7jKg8kzRe5Z')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 7</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1J3Hp_wtkm2odGv7d3bI3p-1Y8CBGz8g7" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1J3Hp_wtkm2odGv7d3bI3p-1Y8CBGz8g7')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 8</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1k99T7mAeKCiYc6a8Q8E3k7aIY1rYt6DP" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1k99T7mAeKCiYc6a8Q8E3k7aIY1rYt6DP')">▶ Watch Video</button>
         </div>
 
         <div class="video-card">
             <h3>Video No. 9</h3>
-            <a class="watch-btn" href="https://drive.google.com/open?id=1L84bzEWwZDjGGmM4k9K9v0k5Sxy8qk9K" target="_blank" rel="noopener noreferrer">
-                ▶ Watch Video
-            </a>
+            <button class="watch-btn" onclick="openDrive('1L84bzEWwZDjGGmM4k9K9v0k5Sxy8qk9K')">▶ Watch Video</button>
         </div>
 
     </div>
@@ -91,6 +73,13 @@
 <footer>
     ❤️ With love — Family & Friends
 </footer>
+
+<script>
+function openDrive(id) {
+    const url = `https://drive.google.com/file/d/${id}/view`;
+    window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
