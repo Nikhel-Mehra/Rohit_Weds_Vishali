@@ -2,96 +2,211 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Rohit Weds Vishali | Wedding Movies</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Weds Vishali | 14 Feb 2024</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS STYLING */
+        :root {
+            --gold: #d4af37;
+            --glass-bg: rgba(255, 255, 255, 0.12);
+            --dark-overlay: rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* background.jpg must be in the same folder on GitHub */
+            background: linear-gradient(var(--dark-overlay), var(--dark-overlay)), 
+                        url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 20px 60px;
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            color: var(--gold);
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+            margin-bottom: 10px;
+        }
+
+        .wedding-date {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .gallery-container {
+            max-width: 1250px;
+            margin: 0 auto 100px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        /* Glassmorphism Card Style */
+        .video-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .video-card:hover {
+            transform: scale(1.03);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-title {
+            padding: 20px 10px 5px 10px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive adjustments for phones */
+        @media (max-width: 600px) {
+            h1 { font-size: 3.5rem; }
+            .wedding-date { font-size: 1.1rem; letter-spacing: 2px; }
+            .gallery-container { grid-template-columns: 1fr; gap: 25px; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>💍 Rohit Weds Vishali</h1>
-        <p>Married on 14 February 2024</p>
+    <header>
+        <h1>Rohit & Vishali</h1>
+        <div class="wedding-date">Married on 14th February 2024</div>
+    </header>
+
+    <div class="gallery-container">
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/13EV09q3MVBaUEfwEkwjmC3L-QViioibL/preview"></iframe>
+            </div>
+            <div class="video-title">The Grand Entry</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1Vud5WDs2qf3xDUr1U1-qZs-Udl6IFhW6/preview"></iframe>
+            </div>
+            <div class="video-title">Sacred Rituals - Part I</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1y5iEiCKamqA0S3aR02GjgBTPZxk78CDz/preview"></iframe>
+            </div>
+            <div class="video-title">Sacred Rituals - Part II</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1FPLBXNmpCN0maw-iBiemUOqaGOilIgM8/preview"></iframe>
+            </div>
+            <div class="video-title">The Varmala</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/175HGIU2dP1LKVwxO81xhp6DyE4uxg74K/preview"></iframe>
+            </div>
+            <div class="video-title">Ring Ceremony</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1SCNSFo76BHCbpJAi7e94pKJtR9BzL7NS/preview"></iframe>
+            </div>
+            <div class="video-title">Family Moments</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1J3Hp_wtkm2odG474MZBPkJ_BjxKCcjw8/preview"></iframe>
+            </div>
+            <div class="video-title">The Reception</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/1tLh_N-RNoW7x6wXgY5P9F9M0Z1Y1Z1Z/preview"></iframe>
+            </div>
+            <div class="video-title">Dance & Celebration</div>
+        </div>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/FILE_ID/preview"></iframe>
+            </div>
+            <div class="video-title">The Vidaai (Farewell)</div>
+        </div>
     </div>
-</section>
 
-<!-- WEDDING MOVIES SECTION -->
-<section class="movies">
-    <h2>🎬 Wedding Movies</h2>
-    <p class="hint">📱 Tip: Tap the link → Open in browser (not Drive app)</p>
-
-    <div class="gallery">
-
-        <div class="video-card">
-            <h3>Video No. 1</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/13EV09q3MVBaUE5SydAjlBzjOgD4TY6x9/view">
-                https://drive.google.com/file/d/13EV09q3MVBaUE5SydAjlBzjOgD4TY6x9/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 2</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1Vud5WDs2qf3xDRpVj0c3s3mPLdz-qb9X/view">
-                https://drive.google.com/file/d/1Vud5WDs2qf3xDRpVj0c3s3mPLdz-qb9X/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 3</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1y5iEiCKamqA0Sf4I5nCtn4i7PYTnYfZ7/view">
-                https://drive.google.com/file/d/1y5iEiCKamqA0Sf4I5nCtn4i7PYTnYfZ7/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 4</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1FPLBXNmpCN0maHbb4nHmrw6q9oKyo3mn/view">
-                https://drive.google.com/file/d/1FPLBXNmpCN0maHbb4nHmrw6q9oKyo3mn/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 5</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/175HGIU2dP1LK5TjTANTruI-0RxFh8E7O/view">
-                https://drive.google.com/file/d/175HGIU2dP1LK5TjTANTruI-0RxFh8E7O/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 6</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1SCNSFo76BHCbpz6P7ySHz7jKg8kzRe5Z/view">
-                https://drive.google.com/file/d/1SCNSFo76BHCbpz6P7ySHz7jKg8kzRe5Z/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 7</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1J3Hp_wtkm2odGv7d3bI3p-1Y8CBGz8g7/view">
-                https://drive.google.com/file/d/1J3Hp_wtkm2odGv7d3bI3p-1Y8CBGz8g7/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 8</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1k99T7mAeKCiYc6a8Q8E3k7aIY1rYt6DP/view">
-                https://drive.google.com/file/d/1k99T7mAeKCiYc6a8Q8E3k7aIY1rYt6DP/view
-            </a>
-        </div>
-
-        <div class="video-card">
-            <h3>Video No. 9</h3>
-            <a class="drive-link" href="https://drive.google.com/file/d/1L84bzEWwZDjGGmM4k9K9v0k5Sxy8qk9K/view">
-                https://drive.google.com/file/d/1L84bzEWwZDjGGmM4k9K9v0k5Sxy8qk9K/view
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<footer>
-    ❤️ With love — Family & Friends
-</footer>
+    <footer>
+        <p>Created with Love for Rohit & Vishali's Wedding Memories</p>
+    </footer>
 
 </body>
 </html>
