@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,7 @@ body {
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
     z-index: 1;
-    pointer-events: none; /* 🔑 FIX */
+    pointer-events: none;
 }
 
 .hero-content {
@@ -55,6 +54,7 @@ body {
 .movies h2 {
     margin-bottom: 30px;
     color: #6c3483;
+    text-align: center;
 }
 
 /* GALLERY */
@@ -80,7 +80,7 @@ body {
     color: #6c3483;
 }
 
-/* BUTTON (FIXED) */
+/* WATCH BUTTON */
 .watch-btn {
     display: inline-block;
     padding: 14px 28px;
@@ -89,8 +89,7 @@ body {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
-    position: relative;
-    z-index: 5; /* 🔑 FIX */
+    z-index: 5;
 }
 
 .watch-btn:active {
