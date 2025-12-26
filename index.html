@@ -9,7 +9,7 @@
 
     <!-- PASSWORD SCRIPT -->
     <script>
-        const correctPassword = "RV2024";
+        const correctPassword = "RohitVishali2024";
 
         function checkPassword() {
             const entered = document.getElementById("passwordInput").value;
@@ -29,11 +29,7 @@
             --dark-overlay: rgba(0, 0, 0, 0.6);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Poppins', sans-serif;
@@ -73,11 +69,10 @@
             font-family: 'Great Vibes', cursive;
             font-size: 3rem;
             color: var(--gold);
-            margin-bottom: 10px;
         }
 
         .password-box p {
-            margin-bottom: 20px;
+            margin: 15px 0;
             opacity: 0.9;
         }
 
@@ -86,8 +81,8 @@
             padding: 12px;
             border-radius: 12px;
             border: none;
-            font-size: 1rem;
             margin-bottom: 15px;
+            font-size: 1rem;
         }
 
         .password-box button {
@@ -99,9 +94,7 @@
             cursor: pointer;
         }
 
-        #main-content {
-            display: none;
-        }
+        #main-content { display: none; }
 
         header {
             text-align: center;
@@ -124,7 +117,7 @@
 
         .gallery-container {
             max-width: 1250px;
-            margin: 0 auto 100px auto;
+            margin: 0 auto;
             padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -162,6 +155,49 @@
             color: var(--gold);
         }
 
+        /* PHOTO BUTTON */
+        .photo-cta {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin: 80px 0 20px;
+        }
+
+        .swipe-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            padding: 16px 34px;
+            background: linear-gradient(135deg, #d4af37, #f1c40f);
+            color: #000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(212,175,55,0.4);
+        }
+
+        .swipe-btn::before {
+            content: '';
+            position: absolute;
+            left: -60%;
+            top: 0;
+            width: 60%;
+            height: 100%;
+            background: rgba(255,255,255,0.35);
+            transform: skewX(-20deg);
+            transition: left 0.5s ease;
+        }
+
+        .swipe-btn:hover::before {
+            left: 120%;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+        }
+
         footer {
             text-align: center;
             padding: 60px;
@@ -170,9 +206,7 @@
         }
 
         @media (max-width: 500px) {
-            .gallery-container {
-                grid-template-columns: 1fr;
-            }
+            .gallery-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -188,7 +222,7 @@
     </div>
 </div>
 
-<!-- MAIN WEBSITE -->
+<!-- MAIN CONTENT -->
 <div id="main-content">
 
 <header>
@@ -198,73 +232,31 @@
 
 <div class="gallery-container">
 
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/13EV09q3MVBaUEfwEkwjmC3L-QViioibL/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 1</div>
-    </div>
+    <!-- VIDEOS -->
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/13EV09q3MVBaUEfwEkwjmC3L-QViioibL/preview"></iframe></div><div class="video-title">VIDEO 1</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1Vud5WDs2qf3xDUr1U1-qZs-Udl6IFhW6/preview"></iframe></div><div class="video-title">VIDEO 2</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1y5iEiCKamqA0S3aR02GjgBTPZxk78CDz/preview"></iframe></div><div class="video-title">VIDEO 3</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1FPLBXNmpCN0maw-iBiemUOqaGOilIgM8/preview"></iframe></div><div class="video-title">VIDEO 4</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/175HGIU2dP1LKVwxO81xhp6DyE4uxg74K/preview"></iframe></div><div class="video-title">VIDEO 5</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1SCNSFo76BHCbpJAi7e94pKJtR9BzL7NS/preview"></iframe></div><div class="video-title">VIDEO 6</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1J3Hp_wtkm2odG474MZBPkJ_BjxKCcjw8/preview"></iframe></div><div class="video-title">VIDEO 7</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1k99T7mAeKCiYc83A-z4-ODS1jhbQGub9/preview"></iframe></div><div class="video-title">VIDEO 8</div></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://drive.google.com/file/d/1L84bzEWwZDjGGkcWX98-DDAgzEchwAGo/preview"></iframe></div><div class="video-title">VIDEO 9</div></div>
 
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1Vud5WDs2qf3xDUr1U1-qZs-Udl6IFhW6/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 2</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1y5iEiCKamqA0S3aR02GjgBTPZxk78CDz/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 3</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1FPLBXNmpCN0maw-iBiemUOqaGOilIgM8/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 4</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/175HGIU2dP1LKVwxO81xhp6DyE4uxg74K/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 5</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1SCNSFo76BHCbpJAi7e94pKJtR9BzL7NS/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 6</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1J3Hp_wtkm2odG474MZBPkJ_BjxKCcjw8/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 7</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1k99T7mAeKCiYc83A-z4-ODS1jhbQGub9/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 8</div>
-    </div>
-
-    <div class="video-card">
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1L84bzEWwZDjGGkcWX98-DDAgzEchwAGo/preview"></iframe>
-        </div>
-        <div class="video-title">VIDEO 9</div>
+    <!-- PHOTO BUTTON -->
+    <div class="photo-cta">
+        <a href="https://drive.google.com/drive/folders/14tikdxwSunqJsuLbPC8KZFtE27qUsDqm"
+           target="_blank"
+           class="swipe-btn">
+            <span>Swipe to View Wedding Photos</span>
+            <span class="arrow">➜</span>
+        </a>
     </div>
 
 </div>
 
 <footer>
-    <p>Created By Nikhel Mehra with Love for Rohit & Vishali's Wedding Memories</p>
+    <p>Created by Nikhel Mehra with Love for Rohit & Vishali's Wedding Memories</p>
 </footer>
 
 </div>
